@@ -3,6 +3,7 @@ import pandas
 import datetime as dt
 from random import choice
 import smtplib
+import os
 
 # Today's date
 now = dt.datetime.now()
@@ -10,8 +11,8 @@ month = now.month
 day = now.day
 
 # Sender Email information
-my_email = "the.real.wealthy.academy@gmail.com"
-password = "(1996)Ha"
+my_email = os.environ.get("EMAIL")
+password = os.enivron.get("PASSWORD")
 
 # Reading the csv file and transform it into a dictionary
 data = pandas.read_csv("./birthdays.csv")
