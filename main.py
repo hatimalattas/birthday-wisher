@@ -12,7 +12,7 @@ day = now.day
 
 # Sender Email information
 my_email = os.environ.get("EMAIL")
-password = os.enivron.get("PASSWORD")
+password = os.environ.get("PASSWORD")
 
 # Reading the csv file and transform it into a dictionary
 data = pandas.read_csv("./birthdays.csv")
